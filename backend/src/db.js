@@ -4,9 +4,8 @@ let client;
 
 export const initializeDbConnection = async () => {
   try {
-    const mongoURI =
-      `${process.env.API_MONGO_LOCATION}://${process.env.API_MONGO_USER}:${process.env.API_MONGO_PASS}` +
-      `@${process.env.API_MONGO_URI}/${process.env.API_DB_NAME}?retryWrites=true&w=majority`;
+    const mongoURI = `mongodb+srv://adityapachauri182003:OMWxFQwrfA3icOiN@cluster0.gz44y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+`;
 
     client = await MongoClient.connect(mongoURI, {
       useNewUrlParser: true,
